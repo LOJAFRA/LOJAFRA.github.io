@@ -1,0 +1,18 @@
+//tealium universal tag - utag.16 ut4.0.202109021021, Copyright 2021 Tealium.com Inc. All Rights Reserved.
+try{(function(id,loader){var u={};utag.o[loader].sender[id]=u;if(utag===undefined){utag={};}
+if(utag.ut===undefined){utag.ut={};}
+if(utag.ut.loader===undefined){u.loader=function(o){var a,b,c,l;a=document;if(o.type==="iframe"){b=a.createElement("iframe");b.setAttribute("height","1");b.setAttribute("width","1");b.setAttribute("style","display:none");b.setAttribute("src",o.src);}else if(o.type==="img"){utag.DB("Attach img: "+o.src);b=new Image();b.src=o.src;return;}else{b=a.createElement("script");b.language="javascript";b.type="text/javascript";b.async=1;b.charset="utf-8";b.src=o.src;}
+if(o.id){b.id=o.id;}
+if(typeof o.cb==="function"){if(b.addEventListener){b.addEventListener("load",function(){o.cb();},false);}else{b.onreadystatechange=function(){if(this.readyState==="complete"||this.readyState==="loaded"){this.onreadystatechange=null;o.cb();}};}}
+l=o.loc||"head";c=a.getElementsByTagName(l)[0];if(c){utag.DB("Attach to "+l+": "+o.src);if(l==="script"){c.parentNode.insertBefore(b,c);}else{c.appendChild(b);}}};}else{u.loader=utag.ut.loader;}
+u.ev={'view':1,'link':1};u.initialized=false;u.map={};u.extend=[];u.send=function(a,b){if(u.ev[a]||u.ev.all!==undefined){var c,d,e,f,i;u.data={};for(d in utag.loader.GV(u.map)){if(b[d]!==undefined&&b[d]!==""){e=u.map[d].split(",");for(f=0;f<e.length;f++){u.data[e[f]]=b[d];}}}
+var refSpa1;var refSpa2;var refSpa2pname;var refSpa1pname;var isMedallia=$('script#medspa').lenght;if(isMedallia==undefined||isMedallia<1){var s=document.createElement("script");s.id="medspa";s.type="text/javascript";s.defer=true;s.src="https://nebula-cdn.kampyle.com/we/62238/onsite/embed.js";$("head").append(s);}
+function setCookieowspa(name,value,days){var expires="";if(days){var date=new Date();date.setTime(date.getTime()+(days*24*60*60*1000));expires="; expires="+date.toUTCString();}
+document.cookie=name+"="+(value||"")+expires+"; path=/";}
+function getCookieowspa(name){var nameEQ=name+"=";var ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1,c.length);if(c.indexOf(nameEQ)==0)return c.substring(nameEQ.length,c.length);}
+return null;}
+function medValues(){if(window.KAMPYLE_ONSITE_SDK&&typeof KAMPYLE_ONSITE_SDK.updatePageView==='function'){KAMPYLE_ONSITE_SDK.updatePageView();}}
+function medSpa(){setTimeout(medValues,800);}
+function refOW(medSpa){if(getCookieowspa('urlOW')&&getCookieowspa('urlOW')!=''){refSpa1=document.location.href;refSpa2=getCookieowspa('urlOW');setCookieowspa('referrerOW',refSpa2);setCookieowspa('urlOW',refSpa1);utag_data["urlOW"]=refSpa1;utag_data["referrerOW"]=refSpa2;medSpa();}else{refSpa1=document.location.href;setCookieowspa('urlOW',refSpa1);medSpa();};}
+refOW(medSpa);let urlMdll=location.href;document.body.addEventListener('click',()=>{requestAnimationFrame(()=>{if(urlMdll!==location.href){refOW(medSpa);}
+urlMdll=location.href;});},true);}};utag.o[loader].loader.LOAD(id);})("16","vodafone.es-mivoweb");}catch(error){utag.DB(error);}
